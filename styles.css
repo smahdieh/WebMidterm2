@@ -1,0 +1,92 @@
+/* Resetting default margin and padding for body and html elements */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Setting background image, covering the entire viewport, centered */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styling for the main background container */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+/* Styling for the main content container */
+.content-container {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%; /* 80% width of the viewport */
+    max-width: 800px; /* Maximum width to maintain readability */
+    margin: 0 auto; /* Centering the container horizontally */
+}
+
+/* Flex layout for left and right sections */
+.left-section, .right-section {
+    flex: 1;
+}
+
+/* Additional styling for the left section */
+.left-section {
+    margin-right: 20px;
+}
+
+/* Styling for the form container */
+#genderForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Styling for common button styles */
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid rgb(10, 49, 91); /* Dark blue border */
+}
+
+/* Additional styling for the clear button */
+button.clear {
+    padding: 5px;
+    margin-top: 1px;
+}
+
+/* Additional styling for the submit and save buttons */
+button.submit-save {
+    /* Adjusted padding for Submit and Save buttons to be the same */
+    padding: 10px;
+}
+
+/* Styling when hovering over a button */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the prediction and saved answers containers */
+#predictionResult, #savedAnswers {
+    margin-top: 20px;
+}
+
+/* Styling for saved answer items */
+.saved-answer {
+    border: 2px dashed #333; /* Dashed border */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Styling for the saved message */
+.saved-message {
+    color: green; /* Green text color */
+}

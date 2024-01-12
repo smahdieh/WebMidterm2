@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mr or Ms?</title>
+</head>
+<body>
+    <!-- Main container for the application -->
+    <div class="background">
+        <!-- Container for the content -->
+        <div class="content-container">
+            <!-- Left section containing input form -->
+            <div class="left-section">
+                <h2>Mr. or Ms. ?</h2>
+                <!-- Form to input name and select gender -->
+                <form id="genderForm" onsubmit="event.preventDefault(); predictGender();">
+                    <label for="nameInput">Name:</label>
+                    <input type="text" id="nameInput" maxlength="255" required>
+
+                    <label><input type="radio" name="genderOption" value="male"> Male</label>
+                    <label><input type="radio" name="genderOption" value="female"> Female</label>
+
+                    <button type="button" class="clear" onclick="clearGenders()">Clear Genders</button>
+                    <button type="submit" class="submit-save">Submit</button>
+                    <button type="button" id="saveButton" disabled onclick="saveAnswer()">Save</button>
+                </form>
+            </div>
+
+            <!-- Right section displaying predictions and saved answers -->
+            <div class="right-section">
+                <h2>Prediction</h2>
+                <div id="predictionResult"></div>
+                <div id="savedAnswers"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
